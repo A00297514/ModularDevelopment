@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+  <!--Project Settings-->
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  
+    <!--Project Manifest-->
+    <PackageId>com.example.www.applogger</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Sagar Shah</Authors>
+    <Company>Example Industries</Company>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="docs\readme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>
