@@ -14,3 +14,13 @@ Assignments and Classwork of Modular Development
     {
         return component.GetText();
     }
+8. Encountered this error in PlainDecorator When Commented this code
+    //public PlainDecorator(IComponent<string> component) : base(component)
+    // {
+    // }
+    Error:
+    There is no argument given that corresponds to the required parameter 'component' of 'Decorator<string>.Decorator(IComponent<string>)'CS7036
+9. Have to uncomment the above constructor
+10. All Class Files have been created but have few questions in mind that need to be asked to sir in class.
+    10.1 what is the meaning of virtual and why there is a need of that
+    10.2 what is the need of 

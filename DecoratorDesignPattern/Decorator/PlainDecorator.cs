@@ -8,7 +8,7 @@ public class PlainDecorator : Decorator<string>
 
     public override string GetText()
     {
-        string baseText = base.GetText();
-        return "Prefix Text: " + baseText;
+        
+        return  base.GetText() + "text added.";
     }
 }
