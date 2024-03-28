@@ -8,7 +8,6 @@ public class PlainDecorator : Decorator<string>
 
     public override string GetText()
     {
-        
-        return  base.GetText() + "text added.";
+        return base.GetText() + " - A00297514";
     }
 }
