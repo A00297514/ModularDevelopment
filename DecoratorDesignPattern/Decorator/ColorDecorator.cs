@@ -4,6 +4,7 @@ public class ColorDecorator : Decorator<string>
 {
     public ColorDecorator(IComponent<string> component) : base(component)
     {
+       
     }
 
     public override string GetText()
