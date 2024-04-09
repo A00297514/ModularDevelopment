@@ -24,3 +24,11 @@ Assignments and Classwork of Modular Development
 10. All Class Files have been created but have few questions in mind that need to be asked to sir in class.
     10.1 what is the meaning of virtual and why there is a need of that
     10.2 what is the need of 
+
+# Steps Performed for Weather Monitoring System
+1. Watched the recording of class 8 for 2nd of April and understood the requirement for th assignment.
+2. Created one classlibrary and one console app named WMS.Library and WMS.Console.
+3. Also separate the interface by creating its folder in library from observers and factory.
+4. As asked in the class have created 6 class files.
+5. Tried to code for factory using switch statement and tried to create singleton yet no error has encountered but the program is incomplete
+
