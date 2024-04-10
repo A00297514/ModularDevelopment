@@ -3,7 +3,9 @@ using WMS.Library.Interface;
 using System;
 using System.Collections.Generic;
 
-
+/// <summary>
+/// Singleton class that collects temprature data from console app and notifies to the observers.
+/// </summary>
 public class WeatherData
 {
     private static WeatherData? _instance;
@@ -33,8 +35,7 @@ public class WeatherData
     {
         if(!displays.Contains(display)){
             displays.Add(display);
-        }
-        
+        }   
     }
 
     public void Unsubscribe(IDisplay display)
