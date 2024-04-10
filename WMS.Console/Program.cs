@@ -9,10 +9,13 @@ using WMS.Library.Interface;
         weatherData.Subscribe(new StatisticsDisplay());
         weatherData.Subscribe(new ForecastDisplay());
 
-        // Simulate weather changes
-        Random rand = new Random();
-        int temperature = rand.Next(-50,50);
-        weatherData.setTemperature(temperature);
-
+        for(int i = 0; i < 3; i++)
+        {
+                // Simulate weather changes
+                Random rand = new Random();
+                int temperature = rand.Next(-50,50);
+                weatherData.setTemperature(temperature);
+                Console.WriteLine("-----------------------------------");
+        }
        
     

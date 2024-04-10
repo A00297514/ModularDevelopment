@@ -2,14 +2,17 @@ namespace WMS.Library;
 using WMS.Library.Interface;
 public class StatisticsDisplay : IDisplay
 {
-   // private double averageTemperature;
-    //private double maxTemperature;
-    //private double minTemperature;
+    private List<int> temperatures = new List<int>();
 
+   
     public void Display(int temp)
     {
-        
-        //Console.WriteLine($"Average Temperature: {averageTemperature}°C, Max Temperature: {maxTemperature}°C, Min Temperature: {minTemperature}°C");
-        Console.WriteLine("Displaying weather Statistics...");
+        temperatures.Add(temp);
+
+        double average = temperatures.Count > 0 ? temperatures.Average() : 0;
+        int max = temperatures.Count > 0 ? temperatures.Max() : 0;
+        int min = temperatures.Count > 0 ? temperatures.Min() : 0;
+        Console.WriteLine($"Average Temperature: {average} C, Max Temperature: {max} C, Min Temperature: {min} C");
     }
+ 
 }

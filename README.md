@@ -34,4 +34,6 @@ Assignments and Classwork of Modular Development
 6. Added WMS.Console and WMS.Library to the sln file
 7. WMS.Library is referenced in WMS.Console
 8. Successfully created Singleton, Factory and Console app.
-9. dotnet build is successfull as well as run with ForecaseDisplay 
+9. dotnet build is successfull as well as run with ForecastDisplay 
+10. Forecast and Statistics are ready and only left part is current conditions and shown to professor during break in class
+
