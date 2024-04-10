@@ -14,8 +14,9 @@ using WMS.Library.Interface;
                 // Simulate weather changes
                 Random rand = new Random();
                 int temperature = rand.Next(-50,50);
+                Console.WriteLine("----------------------------------------------------------------------------");
                 weatherData.setTemperature(temperature);
-                Console.WriteLine("-----------------------------------");
+                Console.WriteLine("----------------------------------------------------------------------------");
         }
        
     
