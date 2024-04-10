@@ -31,4 +31,7 @@ Assignments and Classwork of Modular Development
 3. Also separate the interface by creating its folder in library from observers and factory.
 4. As asked in the class have created 6 class files.
 5. Tried to code for factory using switch statement and tried to create singleton yet no error has encountered but the program is incomplete
-
+6. Added WMS.Console and WMS.Library to the sln file
+7. WMS.Library is referenced in WMS.Console
+8. Successfully created Singleton, Factory and Console app.
+9. dotnet build is successfull as well as run with ForecaseDisplay 

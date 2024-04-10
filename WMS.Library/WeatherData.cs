@@ -3,44 +3,53 @@ using WMS.Library.Interface;
 using System;
 using System.Collections.Generic;
 
-public class WeatherData<T>
+
+public class WeatherData
 {
-    List<IDisplay<T>> displays = new List<IDisplay<T>>();
-    private T? _value;
+    private static WeatherData? _instance;
+    public int temperature;
+    
+    private List<IDisplay> displays = new List<IDisplay>();
 
-    public T? Value
-    {
-        get{
-            return _value;
-        }
-        set
-        {
-            _value = value;
-            Notify(_value);
-        }
-    }
+    private WeatherData() { }
 
-    public void Subscribe(IDisplay<T> subscriber)
+    public static WeatherData Instance
     {
-        if(!subscribers.Contains((subscriber)))
-        {
-            subscribers.Add(subscriber);
+        get
+        { 
+            if (_instance == null)
+            {
+                _instance = new WeatherData();
+            }
+            return _instance;
         }
     }
 
-    public void Unsubscribe(IObserver<T> subscriber)
+    public void setTemperature(int temperature){
+        this.temperature = temperature;
+        NotifyObservers();
+    }
+    public void Subscribe(IDisplay display)
     {
-        if(subscribers.Contains((subscriber)))
+        if(!displays.Contains(display)){
+            displays.Add(display);
+        }
+        
+    }
+
+    public void Unsubscribe(IDisplay display)
+    {
+        if(displays.Contains(display))
         {
-            subscribers.Remove(subscriber);
+            displays.Remove(display);
         }
     }
 
-    private void Notify(T message)
+    private void NotifyObservers()
     {
-        foreach(var sub in subscribers)
+        foreach (var display in displays)
         {
-            sub.Display(message);
+            display.Display(temperature);
         }
     }
 }

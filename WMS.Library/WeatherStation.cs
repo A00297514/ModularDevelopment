@@ -1,5 +1,5 @@
 namespace WMS.Library;
-
+using WMS.Library.Interface;
 /// <summary>
 /// Factory for creating different types of displays.
 /// </summary>
