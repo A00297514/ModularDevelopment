@@ -13,7 +13,7 @@ public class StatisticsDisplay : IDisplay
         int max = temperatures.Count > 0 ? temperatures.Max() : 0;
         int min = temperatures.Count > 0 ? temperatures.Min() : 0;
         
-        Console.WriteLine($"\n--> Statistics:  Current : {temp} C  Average : {Math.Round(average,2)} C  Maximum : {max} C  Minimum : {min} C");
+        Console.WriteLine($"\n--> Statistics: Average : {Math.Round(average,2)} C  Maximum : {max} C  Minimum : {min} C");
     }
  
 }

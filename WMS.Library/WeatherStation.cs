@@ -3,7 +3,7 @@ using WMS.Library.Interface;
 /// <summary>
 /// Factory for creating different types of displays.
 /// </summary>
-public class WeatherStation
+public class WeatherStation 
 {
     /// <summary>
     /// Factory method to create displays of different observers.
