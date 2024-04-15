@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMP1976_Test.MathLibTest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMP1946_Test.Console", "CMP1946_Test.Console\CMP1946_Test.Console.csproj", "{6ECDD719-5267-48FA-AD39-97BE47D953E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitTheBill", "SplitTheBill\SplitTheBill.csproj", "{A864E51C-D718-427C-9CD9-D92C1E3FD8C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitTheBillTest", "SplitTheBillTest\SplitTheBillTest.csproj", "{9EF7EEDA-164E-4C71-BDBE-189ACD710794}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{6ECDD719-5267-48FA-AD39-97BE47D953E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ECDD719-5267-48FA-AD39-97BE47D953E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ECDD719-5267-48FA-AD39-97BE47D953E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A864E51C-D718-427C-9CD9-D92C1E3FD8C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A864E51C-D718-427C-9CD9-D92C1E3FD8C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A864E51C-D718-427C-9CD9-D92C1E3FD8C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A864E51C-D718-427C-9CD9-D92C1E3FD8C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF7EEDA-164E-4C71-BDBE-189ACD710794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF7EEDA-164E-4C71-BDBE-189ACD710794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF7EEDA-164E-4C71-BDBE-189ACD710794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF7EEDA-164E-4C71-BDBE-189ACD710794}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

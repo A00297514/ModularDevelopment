@@ -37,3 +37,16 @@ Assignments and Classwork of Modular Development
 9. dotnet build is successfull as well as run with ForecastDisplay 
 10. Forecast and Statistics are ready and only left part is current conditions and shown to professor during break in class
 
+
+# Steps Performed for SplitBill Assignment
+1. Created a class library named SplitTheBill
+2. Created a test project named SplitTheBillTest
+3. Added both to the solution file ModularDevelopment.sln
+4. created SplitBill.cs in library and SplitBillTest.cs  in test project
+5. created a method  "public decimal SplitTheAmount(decimal amount, int people)"
+6. wrote 3 different test methods for the above created method
+7. tried to create a method which calculateTip using weighted Average but work is pending
+8. Reference the library project to test project
+9. successfully performed 3 tests but confused with 2 test projects running parallely.
+10. question for professor how to perform a single project test methods..??
+
