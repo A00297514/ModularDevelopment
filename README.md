@@ -49,4 +49,6 @@ Assignments and Classwork of Modular Development
 8. Reference the library project to test project
 9. successfully performed 3 tests but confused with 2 test projects running parallely.
 10. question for professor how to perform a single project test methods..??
+11. created 2 methods to calculate tip using weighted average and calculate tip/person
+12. Also wrote logic which throws exception if wrong values like 0s or negative value is passed in parameters
 
