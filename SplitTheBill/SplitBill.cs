@@ -66,8 +66,6 @@ public class SpiltBill
             decimal tipPerPerson = totalTipAmount / patrons;
 
             return tipPerPerson;
-        }
-        
-        
+        }        
     }
 }

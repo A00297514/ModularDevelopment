@@ -23,11 +23,12 @@ public class SplitBillTest
 
     [TestMethod]
     public void SplitTheAmount_NegativeAmount_ThrowsArgumentException()
-        {
-            // Arrange
-            SpiltBill billSplitter = new SpiltBill();
+    {
+        // Arrange
+        SpiltBill billSplitter = new SpiltBill();
 
-            // Act & Assert
-            Assert.ThrowsException<ArgumentException>(() => billSplitter.SplitTheAmount(-100.00m, 5));
-        }
+        // Act & Assert
+        Assert.ThrowsException<ArgumentException>(() => billSplitter.SplitTheAmount(-100.00m, 5));
+    }
+
 }
