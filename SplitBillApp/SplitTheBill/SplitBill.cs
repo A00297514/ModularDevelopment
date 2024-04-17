@@ -48,7 +48,7 @@ public class SpiltBill
 
     public decimal CalculateTipPerPerson(decimal price, int patrons, float tipPercentage)
     {
-        if(price<0){
+        if(price<=0){
             throw new ArgumentException("Price must be >=0");
         }
 
