@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FeatureManagement;
-var featureManagement = new Dictionary<string, string> {{ "FeatureManagement:Square", "false"}, { "FeatureManagement:Rectangle", "false"}, { "FeatureManagement:Triangle", "false"}};
+var featureManagement = new Dictionary<string, string> {{ "FeatureManagement:Square", "false"}, { "FeatureManagement:Rectangle", "false"}, { "FeatureManagement:Triangle", "true"}};
 
 IConfigurationRoot configuration = new ConfigurationBuilder().AddInMemoryCollection(featureManagement).Build();
 
@@ -42,6 +42,7 @@ if (await featureManager.IsEnabledAsync("Triangle"))
     var _base = Console.ReadLine();
     Console.WriteLine("Enter the height: ");
     var height = Console.ReadLine();
+    Console.WriteLine();
     Console.WriteLine("Enter the length of a side 1: ");
     var side1 = Console.ReadLine();
     Console.WriteLine("Enter the length of a side 2: ");

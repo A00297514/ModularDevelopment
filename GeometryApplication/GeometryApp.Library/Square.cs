@@ -11,11 +11,17 @@ public class Square : IShape
 
     public double CalculateArea()
     {
+        if(side<=0){
+            throw new ArgumentException("The value should be positive and >0...!!");
+        }
         return side * side; 
     }
 
     public double CalculatePerimeter()
     {
+        if(side<=0){
+            throw new ArgumentException("The value should be positive and >0...!!");
+        }
         return 4 * side; 
     }
 

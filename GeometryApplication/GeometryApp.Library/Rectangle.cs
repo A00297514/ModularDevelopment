@@ -13,11 +13,32 @@ public class Rectangle : IShape
 
     public double CalculateArea()
     {
-        return length * width; 
+        if(length<=0){
+            throw new ArgumentException("The Length should be positive...!!");
+        }
+
+        else if(width<=0){
+            throw new ArgumentException("The Width should be positive...!!");
+        }
+
+        else {
+            return length * width; 
+        }
     }
 
     public double CalculatePerimeter()
     {
-        return 2 * (length + width); 
+        if(length<=0){
+            throw new ArgumentException("The Length should be positive...!!");
+        }
+
+        else if(width<=0){
+            throw new ArgumentException("The Width should be positive...!!");
+        }
+
+        else {
+            return 2 * (length + width); 
+        }
+        
     }
 }
