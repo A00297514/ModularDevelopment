@@ -3,6 +3,7 @@ using GeometryApp.Library;
 [TestClass]
 public class RectangleTest
 {
+    // Test cases for CalculateArea() for Rectangle
     [TestMethod]
     public void Calculate_Area_With_Length_And_Width_Zero_Throw_Exception()
     {
@@ -25,6 +26,7 @@ public class RectangleTest
         Assert.AreEqual(20, ret);
     }
 
+    // Test cases for CalculatePerimeter() for Rectangle
    [TestMethod]
     public void Calculate_Perimeter_With_Length_And_Width_Zero_Throw_Exception()
     {

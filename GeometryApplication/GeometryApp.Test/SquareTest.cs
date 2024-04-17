@@ -3,6 +3,7 @@ using GeometryApp.Library;
 [TestClass]
 public class SquareTest
 {
+    // Test cases for CalculateArea() of Square
     [TestMethod]
     public void Calculate_Area_With_Side_Length_Zero_Throw_Exception()
     {
@@ -18,12 +19,14 @@ public class SquareTest
     }
 
     [TestMethod]
-    public void CalculatPerimeter_With_Side_Length_5_Returns_25()
+    public void Calculate_Area_With_Side_Length_5_Returns_25()
     {
         Square obj = new Square(5);
         var ret = obj.CalculateArea();
         Assert.AreEqual(25, ret);
     }
+
+    // Test cases for CalculatePerimeter() for Square
 
     [TestMethod]
     public void Calculate_Perimeter_With_Side_Length_Zero_Throw_Exception()
