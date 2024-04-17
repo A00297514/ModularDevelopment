@@ -2,12 +2,21 @@ namespace GeometryApp.Library;
 
 public class Square : IShape
 {
-    public double CalculateArea(){
-        return 0;
+    private double side;
+
+    public Square(double side)
+    {
+        this.side = side;
     }
 
-    public double CalculatePerimeter(){
-        return 0;
+    public double CalculateArea()
+    {
+        return side * side; 
+    }
+
+    public double CalculatePerimeter()
+    {
+        return 4 * side; 
     }
 
 }
