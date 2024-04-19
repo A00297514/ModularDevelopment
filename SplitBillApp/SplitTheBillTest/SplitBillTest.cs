@@ -36,7 +36,67 @@ public class SplitBillTest
         // Act & Assert
         Assert.ThrowsException<ArgumentException>(() => billSplitter.SplitTheAmount(-100.00m, 5));
     }
+//-------------------------------------------------------------------------------------------------------------------------------------
+    // Test case: Calculate tip for empty meal costs dictionary
+    [TestMethod]
+    public void Test_EmptyMealCostsDictonary_Throws_Exception()
+    {
+        // Arrange
+        Dictionary<string, decimal> mealCosts = new Dictionary<string, decimal>();
+        float tipPercentage = 15.00f;
+        SpiltBill billSplitter = new SpiltBill();
+        
+        
+        // Act & Assert
+        Assert.ThrowsException<ArgumentException>(() => billSplitter.CalculateTip(mealCosts, tipPercentage));
+    }
 
+    // Test case: Calculate tip for non-empty meal costs dictionary with negative tip percentage (should throw ArgumentException)
+    [TestMethod]
+    public void Test_NonEmptyMealCosts_But_NegativeTipPercentage_ThrowsException()
+    {
+        // Arrange
+        Dictionary<string, decimal> mealCosts = new Dictionary<string, decimal>()
+        {
+            { "Sagar", 40.25M },
+            { "Meet", 22.75M }
+        };
+        float tipPercentage = -5;
+        SpiltBill billSplitter = new SpiltBill();
+
+        // Act & Assert
+        Assert.ThrowsException<ArgumentException>(() => billSplitter.CalculateTip(mealCosts, tipPercentage));
+    }
+
+    // Test case: Calculate tip for non-empty meal costs dictionary with positive tip percentage
+    [TestMethod]
+    public void Test_NonEmptyMealCosts_PositiveTipPercentage_Returns_Dictonary()
+    {
+
+        // Arrange
+        SpiltBill billSplitter = new SpiltBill();
+        Dictionary<string, decimal> mealCosts = new Dictionary<string, decimal>()
+        {
+            { "Sagar", 50M },
+            { "Milan", 30M }
+        };
+        float tipPercentage = 10f;
+        
+        // Act
+        var ret = billSplitter.CalculateTip(mealCosts, tipPercentage);
+        Dictionary<string, decimal> expect  = new Dictionary<string, decimal>()
+        {
+            { "Sagar", 5M },
+            { "Milan", 3M }
+        };
+
+        CollectionAssert.AreEqual(expect,ret);    
+    }
+
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
 
     // Test method for calculating tip per person when price, patrons, and tip percentage are valid.
     [TestMethod]

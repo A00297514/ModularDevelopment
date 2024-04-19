@@ -23,27 +23,34 @@ public class SpiltBill
     
     public Dictionary<string, decimal> CalculateTip(Dictionary<string, decimal> mealCosts, float tipPercentage)
     {
-        if(tipPercentage<0){
+        if(mealCosts.Count<=0){
+            throw new ArgumentException("Dictonary is empty..!!");
+        }
+
+        else if(tipPercentage<0){
             throw new ArgumentException("Percenatage of tip must be >=0");
         }
+        
+        else{
+            Dictionary<string, decimal> tipAmounts = new Dictionary<string, decimal>();
 
-        Dictionary<string, decimal> tipAmounts = new Dictionary<string, decimal>();
+            decimal totalMealCost = 0;
 
-        decimal totalMealCost = 0;
+            foreach (var kvp in mealCosts)
+            {
+                totalMealCost += kvp.Value;
+            }
 
-        foreach (var kvp in mealCosts)
-        {
-            totalMealCost += kvp.Value;
+            foreach (var kvp in mealCosts)
+            {
+                decimal tipAmount = kvp.Value * Convert.ToDecimal(tipPercentage) / 100;
+                decimal weightedTip = tipAmount * (kvp.Value / totalMealCost);
+                tipAmounts.Add(kvp.Key, weightedTip);
+            }
+
+            return tipAmounts;
         }
-
-        foreach (var kvp in mealCosts)
-        {
-            decimal tipAmount = kvp.Value * Convert.ToDecimal(tipPercentage) / 100;
-            decimal weightedTip = tipAmount * (kvp.Value / totalMealCost);
-            tipAmounts.Add(kvp.Key, weightedTip);
-        }
-
-        return tipAmounts;
+        
     }
 
     public decimal CalculateTipPerPerson(decimal price, int patrons, float tipPercentage)
