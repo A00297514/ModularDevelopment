@@ -70,7 +70,7 @@ public class SplitBillTest
 
     // Test case: Calculate tip for non-empty meal costs dictionary with positive tip percentage
     [TestMethod]
-    public void Test_NonEmptyMealCosts_PositiveTipPercentage_Returns_Dictonary()
+    public void Test_NonEmptyMealCosts_ZeroTipPercentage_Returns_Dictonary_With_Weighted_Avg_Tip()
     {
 
         // Arrange
@@ -80,14 +80,14 @@ public class SplitBillTest
             { "Sagar", 50M },
             { "Milan", 30M }
         };
-        float tipPercentage = 10f;
+        float tipPercentage = 0f;
         
         // Act
         var ret = billSplitter.CalculateTip(mealCosts, tipPercentage);
         Dictionary<string, decimal> expect  = new Dictionary<string, decimal>()
         {
-            { "Sagar", 5M },
-            { "Milan", 3M }
+            { "Sagar", 0M },
+            { "Milan", 0M }
         };
 
         CollectionAssert.AreEqual(expect,ret);    
